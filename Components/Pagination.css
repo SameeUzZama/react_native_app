@@ -1,0 +1,20 @@
+.pagination{
+    background-color: rgb(167, 247, 247);
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    border-radius: 5rem;
+    padding: 0 5rem;
+}
+.page-link{
+    background-color: rgb(71, 150, 241);
+    text-decoration: none;
+    padding: 5px 10px;
+    margin: 2px;
+    border-radius: 2px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
