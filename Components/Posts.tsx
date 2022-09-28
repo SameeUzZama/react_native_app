@@ -1,11 +1,7 @@
 import React from "react";
 import { DataTable } from "react-native-paper";
 
-const Posts = ({ posts, loading }: any) => {
-  if (loading) {
-    return <h2>Loading...</h2>;
-  }
-
+const Posts = ({ posts }: any) => {
   return (
     <DataTable>
       <DataTable.Header>
