@@ -1,6 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import { useState, useEffect } from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import axios from "axios";
 import Pagination from "./Components/Pagination";
 import Posts from "./Components/Posts";
@@ -16,14 +16,14 @@ export default function App() {
   const [page, setPage] = useState(0);
   const [hasMore, setHasMore] = useState<boolean>(true);
 
-  // console.log(posts.length);
+  console.log(posts.length);
 
   const fetchPosts = async () => {
     setLoading(true);
     const res = await axios.get(
       `https://hn.algolia.com/api/v1/search_by_date?tags=story&page=${page}`
     );
-    // console.log(res.data);
+    console.log(res.data);
     TotalPage = res?.data?.nbPages;
     let tempArr: any[] = [];
     res?.data?.hits?.map((item: any) => {
@@ -56,7 +56,6 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Posts posts={currentPosts} />
-
       <View>
         <Pagination
           postsPerPage={postsPerPage}

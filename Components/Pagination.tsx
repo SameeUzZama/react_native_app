@@ -2,8 +2,8 @@ import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 
 const Pagination = ({ postsPerPage, totalPosts, paginate }: any) => {
-  // console.log("totalPosts", totalPosts);
-  // console.log("postsPerPage", postsPerPage);
+  console.log("totalPosts", totalPosts);
+  console.log("postsPerPage", postsPerPage);
 
   const pageNumbers: any = [];
 
@@ -14,7 +14,7 @@ const Pagination = ({ postsPerPage, totalPosts, paginate }: any) => {
   return (
     <View>
       <Text style={styles.pagination}>
-        {pageNumbers.map((number) => (
+        {pageNumbers.map((number: any) => (
           <Text key={number} style={styles.pageItem}>
             <button onClick={() => paginate(number)} className="page-link">
               {number}
